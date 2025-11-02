@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,13 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.View
         Mahasiswa mhs = mahasiswaList.get(position);
         holder.textNama.setText(mhs.getNama());
         holder.textJurusan.setText(mhs.getJurusan());
+
+        // 🔹 Tambah efek klik
+        holder.itemView.setOnClickListener(v ->
+                Toast.makeText(v.getContext(),
+                        "Nama: " + mhs.getNama(),
+                        Toast.LENGTH_SHORT).show()
+        );
     }
 
     @Override
