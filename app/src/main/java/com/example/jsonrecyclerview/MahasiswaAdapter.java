@@ -36,7 +36,7 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.View
         // 🔹 Tambah efek klik
         holder.itemView.setOnClickListener(v ->
                 Toast.makeText(v.getContext(),
-                        "Nama: " + mhs.getNama(),
+                        "Nama: " + mhs.getNama() + "\nJurusan: " + mhs.getJurusan(),
                         Toast.LENGTH_SHORT).show()
         );
     }
